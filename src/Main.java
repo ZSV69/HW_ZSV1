@@ -2,10 +2,9 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        int price = 151;
-        int miles = price / 20;
-        int bonusMiles = miles;
-
-        System.out.println("Начислено бонусных миль: " + bonusMiles);
+        BonusMilesService service = new BonusMilesService();
+        int price = 100_000;
+        int miles = service.calculate(price); // должно получиться 500
+        System.out.println(miles);
     }
 }
